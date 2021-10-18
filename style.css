@@ -2,7 +2,10 @@ body{
     text-align: center;
     background-color: salmon;
 }
-
+#serverName{
+    font-size: 45;
+    font-weight: bold;
+}
 ul{
   list-style:none;
   max-height:200px;
