@@ -1,5 +1,5 @@
 const username = prompt("Enter Name:");
-
+const server = "messages/"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
 import * as fb from  "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
 
@@ -32,13 +32,13 @@ function sendMessage(e) {
       .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   
     // create db collection and send in the data
-    database.ref("messages/" + timestamp).set({
+    database.ref(server + timestamp).set({
       username,
       message,
     });
   }
 
- const fetchChat = database.ref("messages/");
+ const fetchChat = database.ref(server);
 
   fetchChat.on("child_added", function (snapshot){
     const messages = snapshot.val();
