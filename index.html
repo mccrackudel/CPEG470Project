@@ -1,18 +1,16 @@
-<div id="login">
-  <input type="text" id="regemail" placeholder="Register Email"/>
-  <input type="password" id="regpass1" placeholder="Register Password"/>
-  <input type="password" id="regpass2" placeholder="Confirm Password"/>
-  <button type="button" id="register">Click Here To Register</button>
-  <hr>
-  <input type="text" id="logemail" placeholder="Login with Email"/>
-  <input type="password" id="logpass" placeholder="Login Password"/>
-  <button type="button" id="login">Click Here To Login</button>
-</div>
-<hr>
-<div id="app">
-  <h2>Login to enjoy the app</h2>
-</div>
-<hr>
-<h1>My Security Rules Are Cool</h1>
-<div id="rules">
-</div>
+<head>
+  <title>Andrew's ChatRoom</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+  <script type= "module" src="script.js"></script>
+</head>
+<html>
+  <body>
+      <h2>Welcome To my Chat Room Utilizing Firebase Relational Databases!!!</h2>
+      <ul id="chatBox"></ul>
+      <textarea id = "textBox"></textarea>
+      <br>
+      <button id = "submitButton" type = "submit" >Submit</button>
+  </body>
+</html>
