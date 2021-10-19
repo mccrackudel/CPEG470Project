@@ -23,6 +23,21 @@ document.getElementById("serverSelect").addEventListener("click", changeServer);
 function changeServer(e){
     e.preventDefault();
     server = document.getElementById("serverText").value();
+    const timestamp = Date.now();
+    const messageInput = document.getElementById("textBox");
+    const message = "Has entered the Chatroom!";
+  
+    messageInput.value = "";
+  
+    document
+      .getElementById("chatBox")
+      .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  
+    // create db collection and send in the data
+    database.ref(server + timestamp).set({
+      username,
+      message,
+    });
 }
 
 function sendMessage(e) {
