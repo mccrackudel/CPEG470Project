@@ -18,6 +18,7 @@ const firebaseConfig = {
 
 
 document.getElementById("submitButton").addEventListener("click", sendMessage );
+document.getElementsByClassName("serverSelect").addEventListener("click", changeServer);
 
 function changeServer(e){
     e.preventDefault();
