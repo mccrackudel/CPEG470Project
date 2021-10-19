@@ -22,7 +22,7 @@ document.getElementById("serverSelect").addEventListener("click", changeServer);
 
 function changeServer(e){
     e.preventDefault();
-    server = prompt("Enter Server:");
+    server = document.getElementById("serverText").value();
 }
 
 function sendMessage(e) {
