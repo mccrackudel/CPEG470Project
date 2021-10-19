@@ -1,5 +1,5 @@
 const username = "Andrew";
-const server = "firstServer/";
+const server = "messages";
 document.getElementById("serverName").innerHTML = "Server: " + server;
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
 import * as fb from  "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
@@ -23,21 +23,7 @@ document.getElementById("serverSelect").addEventListener("click", changeServer);
 function changeServer(e){
     e.preventDefault();
     server = document.getElementById("serverText").value();
-    const timestamp = Date.now();
-    const messageInput = document.getElementById("textBox");
-    const message = "Has entered the Chatroom!";
-  
-    messageInput.value = "";
-  
-    document
-      .getElementById("chatBox")
-      .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  
-    // create db collection and send in the data
-    database.ref(server + timestamp).set({
-      username,
-      message,
-    });
+    window.location.reload();
 }
 
 function sendMessage(e) {
