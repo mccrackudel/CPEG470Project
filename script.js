@@ -1,5 +1,5 @@
 const username = "Andrew";
-const server = prompt("Enter a server to chat in: messages/ firstServer/ secondServer/");
+const server = "firstServer/";
 document.getElementById("serverName").innerHTML = "Server: " + server;
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
 import * as fb from  "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
@@ -19,23 +19,12 @@ const firebaseConfig = {
 
 document.getElementById("submitButton").addEventListener("click", sendMessage );
 document.getElementById("serverSelect").addEventListener("click", changeServer);
-/*
+
 function changeServer(e){
     e.preventDefault();
     server = document.getElementById("serverText").value();
-
-    const fetchChat = database.ref(server);
-
-  fetchChat.on("child_added", function (snapshot){
-    const messages = snapshot.val();
-    const message = `<li class=${
-      username === messages.username ? "sent" : "receive"
-    }><span>${messages.username}: </span>${messages.message}</li>`;
-  // append the message on the page
-  document.getElementById("chatBox").innerHTML += message;
-  });
 }
-*/
+
 function sendMessage(e) {
     e.preventDefault();
     const timestamp = Date.now();
