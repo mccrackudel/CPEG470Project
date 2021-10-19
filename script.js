@@ -23,6 +23,17 @@ document.getElementById("serverSelect").addEventListener("click", changeServer);
 function changeServer(e){
     e.preventDefault();
     server = document.getElementById("serverText").value();
+
+    const fetchChat = database.ref(server);
+
+  fetchChat.on("child_added", function (snapshot){
+    const messages = snapshot.val();
+    const message = `<li class=${
+      username === messages.username ? "sent" : "receive"
+    }><span>${messages.username}: </span>${messages.message}</li>`;
+  // append the message on the page
+  document.getElementById("chatBox").innerHTML += message;
+  });
 }
 
 function sendMessage(e) {
