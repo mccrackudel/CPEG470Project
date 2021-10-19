@@ -22,12 +22,11 @@ document.getElementById("serverSelect").addEventListener("click", changeServer);
 
 function changeServer(e){
     e.preventDefault();
-    alert("hello");
+    server = "messages/";
 }
 
 function sendMessage(e) {
     e.preventDefault();
-    alert("yoyo");
     const timestamp = Date.now();
     const messageInput = document.getElementById("textBox");
     const message = messageInput.value;
