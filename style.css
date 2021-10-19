@@ -25,7 +25,10 @@ li:nth-child(odd){
   background:#ccc;
   size: 50%;
 }
-
+input{
+    background-color: #b5b0b9;
+    margin-top: 10px;
+}
 textarea{
   background-color: #b5b0b9;
   margin-top: 10px;
