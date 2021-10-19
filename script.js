@@ -18,14 +18,14 @@ const firebaseConfig = {
 
 
 document.getElementById("submitButton").addEventListener("click", sendMessage );
-document.getElementById("serverSelect").addEventListener("click", changeServer);
-
+//document.getElementById("serverSelect").addEventListener("click", changeServer);
+/*
 function changeServer(e){
     e.preventDefault();
     server = document.getElementById("serverText").value();
     window.location.reload();
 }
-
+*/
 function sendMessage(e) {
     e.preventDefault();
     const timestamp = Date.now();
