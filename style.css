@@ -19,9 +19,11 @@ li{
 }
 li:nth-child(even){
   background:#b5b0b9;
+  size: 50%;
 }
 li:nth-child(odd){
   background:#ccc;
+  size: 50%;
 }
 
 textarea{
