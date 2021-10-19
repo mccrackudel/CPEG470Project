@@ -27,7 +27,7 @@ function changeServer(e){
 
 function sendMessage(e) {
     e.preventDefault();
-
+    alert("yoyo");
     const timestamp = Date.now();
     const messageInput = document.getElementById("textBox");
     const message = messageInput.value;
