@@ -18,9 +18,10 @@ const firebaseConfig = {
 
 
 document.getElementById("submitButton").addEventListener("click", sendMessage );
-document.getElementById().addEventListenery("click", changeServer)
+document.getElementsByClassName("serverSelect").addEventListenery("click", changeServer)
 function changeServer(e){
     e.preventDefault();
+    alert(e);
 }
 
 function sendMessage(e) {
